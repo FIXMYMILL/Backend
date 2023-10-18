@@ -15,10 +15,10 @@ app.use("/api/payments",require("./routes/createOrder"));
 app.use("/api/payments",require("./routes/PaymentVerificarion"));
 app.use("/api/payments",require("./routes/RequestKey"));
 
+var port=process.env.PORT || 4000;
 
 
-
-app.listen('4000',async ()=>{
+app.listen(port,async ()=>{
     console.log("Server is on and running on port 4000");
 })
 
