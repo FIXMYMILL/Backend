@@ -17,9 +17,9 @@ app.use("/api/payments",require("./routes/RequestKey"));
 
 var port=process.env.PORT || 4000;
 
-app.get('/api',(req,res)=>{
-    res.send("server is on");
-})
+// app.get('/api',(req,res)=>{
+//     res.send("server is on");
+// })
 app.listen(port,async ()=>{
     console.log("Server is on and running on port 4000");
 })
