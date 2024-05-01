@@ -7,9 +7,10 @@ router.post("/createorder",(req,res)=>{
     key_id: process.env.RAZORPAY_API_KEY,
     key_secret: process.env.RAZORPAY_SECRET_KEY
   });
+  const amount = req.body.userorder.amount > 1000 ? 990 : 790;
    var options = {
-      const amount = req.body.userorder.amount > 1000 ? 990 : 790;
-      currency: "INR",
+     amount :amount,
+     currency: "INR",
      
     };
     instance.orders.create(options, function(err, order) {
